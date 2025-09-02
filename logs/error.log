@@ -1,0 +1,148 @@
+2025-08-24T18:15:40.453Z - ERROR - ValidationError: User validation failed: companyDetails: Cast to string failed for value "{ name: 'JD Corp', type: 'SME', years: '5' }" (type Object) at path "companyDetails"
+    at Document.invalidate (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/document.js:3358:32)
+    at model.$set (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/document.js:1480:12)
+    at model.$set (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/document.js:1132:16)
+    at model.Document (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/document.js:178:12)
+    at model.Model (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/model.js:127:12)
+    at new model (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/model.js:4834:15)
+    at register (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/authController.js:15:18)
+2025-08-24T18:19:39.709Z - ERROR - Error: Invalid login: 534-5.7.9 Application-specific password required. For more information, go to
+534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 5b1f17b1804b1-45b4e26944dsm83462135e9.2 - gsmtp
+    at SMTPConnection._formatError (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:809:19)
+    at SMTPConnection._actionAUTHComplete (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:1588:34)
+    at SMTPConnection.<anonymous> (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:556:26)
+    at SMTPConnection._processResponse (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:993:20)
+    at SMTPConnection._onData (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:774:14)
+    at SMTPConnection._onSocketData (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:195:44)
+    at TLSSocket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+2025-08-24T18:23:43.215Z - ERROR - Error: Email déjà utilisé
+    at register (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/authController.js:12:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-24T18:31:47.449Z - ERROR - Error: Identifiants invalides
+    at login (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/authController.js:30:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-25T09:49:08.728Z - ERROR - Error: Déjà abonné
+    at subscribeNewsletter (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/contactController.js:21:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-25T16:11:01.887Z - ERROR - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:809:19)
+    at SMTPConnection.login (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:454:38)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-transport/index.js:272:32
+    at SMTPConnection.<anonymous> (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:215:17)
+    at Object.onceWrapper (node:events:638:28)
+    at SMTPConnection.emit (node:events:524:28)
+    at SMTPConnection._actionEHLO (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:1371:14)
+    at SMTPConnection._processResponse (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:993:20)
+    at SMTPConnection._onData (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:774:14)
+    at SMTPConnection._onSocketData (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:195:44)
+2025-08-25T16:13:26.564Z - ERROR - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:809:19)
+    at SMTPConnection.login (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:454:38)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-transport/index.js:272:32
+    at SMTPConnection.<anonymous> (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:215:17)
+    at Object.onceWrapper (node:events:638:28)
+    at SMTPConnection.emit (node:events:524:28)
+    at SMTPConnection._actionEHLO (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:1371:14)
+    at SMTPConnection._processResponse (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:993:20)
+    at SMTPConnection._onData (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:774:14)
+    at SMTPConnection._onSocketData (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:195:44)
+2025-08-26T13:29:16.997Z - ERROR - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:809:19)
+    at SMTPConnection.login (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:454:38)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-transport/index.js:272:32
+    at SMTPConnection.<anonymous> (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:215:17)
+    at Object.onceWrapper (node:events:638:28)
+    at SMTPConnection.emit (node:events:524:28)
+    at SMTPConnection._actionEHLO (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:1371:14)
+    at SMTPConnection._processResponse (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:993:20)
+    at SMTPConnection._onData (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:774:14)
+    at SMTPConnection._onSocketData (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/nodemailer/lib/smtp-connection/index.js:195:44)
+2025-08-26T13:40:06.436Z - ERROR - ReferenceError: User is not defined
+    at submitEnrollment (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/enrollmentController.js:33:26)
+    at Layer.handle [as handle_request] (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express/lib/router/route.js:149:13)
+    at handleValidationErrors (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/middlewares/validate.js:8:3)
+    at Layer.handle [as handle_request] (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express/lib/router/route.js:149:13)
+    at middleware (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express-validator/lib/middlewares/check.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-26T13:41:09.224Z - ERROR - ReferenceError: User is not defined
+    at submitEnrollment (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/enrollmentController.js:33:26)
+    at Layer.handle [as handle_request] (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express/lib/router/route.js:149:13)
+    at handleValidationErrors (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/middlewares/validate.js:8:3)
+    at Layer.handle [as handle_request] (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express/lib/router/route.js:149:13)
+    at middleware (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/express-validator/lib/middlewares/check.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-28T12:33:34.895Z - ERROR - Error: Identifiants invalides
+    at login (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/authController.js:28:13)
+2025-08-28T12:34:02.252Z - ERROR - Error: Identifiants invalides
+    at login (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/authController.js:28:13)
+2025-08-28T12:36:36.270Z - ERROR - Error: Identifiants invalides
+    at login (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/authController.js:28:13)
+2025-08-28T12:50:01.411Z - ERROR - Error: Identifiants invalides
+    at login (file:///Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/controllers/authController.js:28:13)
+2025-08-30T18:09:15.443Z - ERROR - ValidationError: Validation failed: status: `approve` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-08-30T18:09:17.325Z - ERROR - ValidationError: Validation failed: status: `approve` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-08-30T18:09:18.069Z - ERROR - ValidationError: Validation failed: status: `approve` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-08-30T18:09:20.125Z - ERROR - ValidationError: Validation failed: status: `approve` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-08-30T18:09:20.307Z - ERROR - ValidationError: Validation failed: status: `approve` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-08-30T18:09:27.502Z - ERROR - ValidationError: Validation failed: status: `reject` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-08-30T18:09:28.377Z - ERROR - ValidationError: Validation failed: status: `reject` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-08-30T18:09:28.623Z - ERROR - ValidationError: Validation failed: status: `reject` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-08-30T18:09:28.851Z - ERROR - ValidationError: Validation failed: status: `reject` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-08-30T18:09:38.199Z - ERROR - ValidationError: Validation failed: status: `approve` is not a valid enum value for path `status`.
+    at _done (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:231:19)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:207:11
+    at schemaPath.doValidate.updateValidator (/Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/helpers/updateValidators.js:165:13)
+    at /Users/macbookpro/Desktop/Baysawar/backend-bay-sa-waar/node_modules/mongoose/lib/schemaType.js:1416:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
