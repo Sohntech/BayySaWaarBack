@@ -162,6 +162,17 @@ export const updateEnrollment = async (req, res, next) => {
     if (!enrollment) {
       return res.status(404).json({ error: 'Inscription non trouvée' });
     }
+
+    // Si l'enrollment est approuvé et qu'il y a un userId, synchroniser la photo
+    if (enrollment.status === 'approved' && enrollment.userId && enrollment.companyLogo?.url) {
+      await User.findByIdAndUpdate(enrollment.userId, {
+        photo: {
+          publicId: enrollment.companyLogo.publicId,
+          url: enrollment.companyLogo.url
+        }
+      });
+    }
+
     res.json({ message: 'Inscription mise à jour', enrollment });
   } catch (err) {
     next(err);

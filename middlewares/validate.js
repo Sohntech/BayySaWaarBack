@@ -21,7 +21,7 @@ const registerValidation = [
 ];
 
 const enrollmentValidation = [
-  body('type').isIn(['partner', 'distributor', 'client']).withMessage('Type invalide'),
+  body('type').isIn(['partner', 'distributor']).withMessage('Type invalide'),
   body('firstName').notEmpty().withMessage('Prénom requis'),
   body('lastName').notEmpty().withMessage('Nom requis'),
   body('email').isEmail().withMessage('Email invalide'),

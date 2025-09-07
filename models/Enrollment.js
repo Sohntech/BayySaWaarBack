@@ -15,6 +15,16 @@ const enrollmentSchema = new mongoose.Schema({
   industry: { type: String },
   companySize: { type: String },
   interests: [{ type: String }],
+  // Champs pour les images
+  companyLogo: {
+    publicId: { type: String },
+    url: { type: String }
+  },
+  businessDocuments: [{
+    publicId: { type: String },
+    url: { type: String },
+    name: { type: String }
+  }],
   status: { type: String, default: 'pending', enum: ['pending', 'approved', 'rejected'] },
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   createdAt: { type: Date, default: Date.now },

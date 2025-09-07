@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import User from '../models/User.js';
 import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
+import { formatUploadData } from '../middlewares/cloudinaryUpload.js';
 
 // Charger les variables d'environnement
 dotenv.config();
@@ -27,10 +28,23 @@ export const submitEnrollment = async (req, res, next) => {
       interests,
     } = req.body;
 
-    // Valider le type d'enrôlement
-    if (!['partner', 'distributor'].includes(type)) {
-      return res.status(400).json({ error: 'Type d’enrôlement invalide' });
+    // Validation côté serveur
+    if (!type || !['partner', 'distributor'].includes(type)) {
+      return res.status(400).json({ error: 'Type d\'enrôlement invalide' });
     }
+    
+    if (!firstName || !lastName || !email || !phone || !country || !city || !companyName || !businessType) {
+      return res.status(400).json({ error: 'Tous les champs obligatoires doivent être remplis' });
+    }
+
+    // Validation email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'Format d\'email invalide' });
+    }
+
+    // Récupérer les données d'upload d'images
+    const uploadData = formatUploadData(req);
 
     // Vérifier si l'email existe déjà
     const existingUser = await User.findOne({ email });
@@ -50,6 +64,7 @@ export const submitEnrollment = async (req, res, next) => {
       password: hashedPassword,
       phone,
       role,
+      photo: uploadData.companyLogo || null, // Utiliser le logo de l'entreprise comme photo de profil
       companyDetails: {
         name: companyName,
         type: businessType,
@@ -75,6 +90,8 @@ export const submitEnrollment = async (req, res, next) => {
       interests,
       userId: user._id,
       status: 'pending',
+      // Ajouter les données d'images
+      ...uploadData,
     };
 
     const enrollment = new Enrollment(enrollmentData);
@@ -175,9 +192,16 @@ export const deleteEnrollment = async (req, res, next) => {
 
 export const getEnrollmentStatus = async (req, res, next) => {
   try {
-    const enrollments = await Enrollment.find({ userId: req.user.id });
+    if (!req.user || !req.user.userId) {
+      return res.status(400).json({ error: 'User ID not found in request' });
+    }
+    
+    const userId = req.user.userId;
+    const enrollments = await Enrollment.find({ userId: userId });
+    
     res.json(enrollments);
   } catch (err) {
+    console.error('Error in getEnrollmentStatus:', err);
     next(err);
   }
 };

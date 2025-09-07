@@ -25,7 +25,10 @@ export const login = async (req, res, next) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
     if (!user || !(await bcrypt.compare(password, user.password))) {
-      throw new Error('Identifiants invalides');
+      return res.status(401).json({ 
+        message: 'Identifiants invalides',
+        error: 'Email ou mot de passe incorrect'
+      });
     }
 
     const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
@@ -96,9 +99,7 @@ export const getAllUsers = async (req, res, next) => {
 export const resetPassword = async (req, res, next) => {
   try {
     const { email } = req.body;
-    const
-  user = await User.find  
-    .findOne({ email });
+    const user = await User.findOne({ email });
     if (!user) throw new Error('Utilisateur non trouvé');
 
     const tempPassword = crypto.randomBytes(4).toString('hex');
@@ -150,8 +151,7 @@ export const getUsersByRole = async (req, res, next) => {
   try {
     if (req.userRole !== 'admin') throw new Error('Accès interdit');
     const { role } = req.params;
-    const users = await User.find
-      .find({ role })
+    const users = await User.find({ role })
       .select('-password')
       .sort({ createdAt: -1 });
 
