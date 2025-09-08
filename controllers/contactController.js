@@ -16,14 +16,37 @@ export async function submitContact(req, res, next) {
 
 export async function subscribeNewsletter(req, res, next) {
   try {
+    console.log('🔍 subscribeNewsletter called with email:', req.body.email);
     const { email } = req.body;
+    
+    if (!email) {
+      return res.status(400).json({ error: 'Email requis' });
+    }
+    
     const existing = await Newsletter.findOne({ email });
-    if (existing) throw new Error('Déjà abonné');
+    if (existing) {
+      console.log('⚠️ Email déjà abonné:', email);
+      return res.status(409).json({ error: 'Déjà abonné' });
+    }
+    
+    console.log('💾 Sauvegarde de l\'abonnement...');
     const subscription = new Newsletter({ email });
     await subscription.save();
-    await sendEmail(email, 'Confirmation abonnement newsletter', 'Merci pour votre abonnement à la newsletter BAY SA WAAR !');
+    console.log('✅ Abonnement sauvegardé');
+    
+    // Envoi d'email en arrière-plan (non bloquant)
+    try {
+      console.log('📧 Envoi de l\'email de confirmation...');
+      await sendEmail(email, 'Confirmation abonnement newsletter', 'Merci pour votre abonnement à la newsletter BAY SA WAAR !');
+      console.log('✅ Email envoyé avec succès');
+    } catch (emailError) {
+      console.error('❌ Erreur envoi email (non bloquant):', emailError.message);
+      // On continue même si l'email échoue
+    }
+    
     res.status(201).json({ message: 'Abonnement réussi' });
   } catch (err) {
+    console.error('❌ Erreur dans subscribeNewsletter:', err);
     next(err);
   }
 }
