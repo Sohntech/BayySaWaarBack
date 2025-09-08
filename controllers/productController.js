@@ -3,15 +3,23 @@ import { formatUploadData } from '../middlewares/cloudinaryUpload.js';
 
 export const getAllProducts = async (req, res, next) => {
   try {
+    console.log('🔍 getAllProducts called');
     const { page = 1, limit = 10, category } = req.query;
     const query = category ? { category } : {};
+    console.log('📊 Query:', query);
+    
     const products = await Product.find(query)
       .limit(limit * 1)
       .skip((page - 1) * limit)
       .sort({ createdAt: -1 });
+    console.log('✅ Products found:', products.length);
+    
     const total = await Product.countDocuments(query);
+    console.log('📈 Total products:', total);
+    
     res.json({ products, total });
   } catch (err) {
+    console.error('❌ Error in getAllProducts:', err);
     next(err);
   }
 };
