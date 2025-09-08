@@ -19,7 +19,10 @@ dotenv.config();
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ 
+  origin: true,  // Accepte tous les domaines (temporaire)
+  credentials: true
+}));
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
