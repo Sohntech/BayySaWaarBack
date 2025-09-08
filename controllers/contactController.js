@@ -34,15 +34,9 @@ export async function subscribeNewsletter(req, res, next) {
     await subscription.save();
     console.log('✅ Abonnement sauvegardé');
     
-    // Envoi d'email en arrière-plan (non bloquant)
-    try {
-      console.log('📧 Envoi de l\'email de confirmation...');
-      await sendEmail(email, 'Confirmation abonnement newsletter', 'Merci pour votre abonnement à la newsletter BAY SA WAAR !');
-      console.log('✅ Email envoyé avec succès');
-    } catch (emailError) {
-      console.error('❌ Erreur envoi email (non bloquant):', emailError.message);
-      // On continue même si l'email échoue
-    }
+    // Envoi d'email désactivé temporairement
+    console.log('📧 Envoi d\'email désactivé temporairement');
+    // TODO: Réactiver l'envoi d'email une fois la configuration corrigée
     
     res.status(201).json({ message: 'Abonnement réussi' });
   } catch (err) {
