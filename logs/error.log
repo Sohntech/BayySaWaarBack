@@ -637,3 +637,27 @@
     at SchemaDocumentArray.doValidate (/Users/macbookpro/Desktop/BayySaWaar/baysawarr/node_modules/mongoose/lib/schema/documentArray.js:247:12)
     at /Users/macbookpro/Desktop/BayySaWaar/baysawarr/node_modules/mongoose/lib/document.js:3111:18
     at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+2025-09-08T08:55:06.203Z - ERROR - Error: Déjà abonné
+    at subscribeNewsletter (file:///Users/macbookpro/Desktop/BayySaWaar/baysawarr/controllers/contactController.js:21:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-08T08:55:59.092Z - ERROR - Error: Déjà abonné
+    at subscribeNewsletter (file:///Users/macbookpro/Desktop/BayySaWaar/baysawarr/controllers/contactController.js:21:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-08T08:56:35.530Z - ERROR - Error: Déjà abonné
+    at subscribeNewsletter (file:///Users/macbookpro/Desktop/BayySaWaar/baysawarr/controllers/contactController.js:21:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-08T09:01:36.162Z - ERROR - Error: Déjà abonné
+    at subscribeNewsletter (file:///Users/macbookpro/Desktop/BayySaWaar/baysawarr/controllers/contactController.js:21:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-08T09:05:23.322Z - ERROR - Error: Déjà abonné
+    at subscribeNewsletter (file:///Users/macbookpro/Desktop/BayySaWaar/baysawarr/controllers/contactController.js:21:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-08T09:05:55.033Z - ERROR - Error: Déjà abonné
+    at subscribeNewsletter (file:///Users/macbookpro/Desktop/BayySaWaar/baysawarr/controllers/contactController.js:21:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-08T09:06:55.250Z - ERROR - Error: Déjà abonné
+    at subscribeNewsletter (file:///Users/macbookpro/Desktop/BayySaWaar/baysawarr/controllers/contactController.js:21:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-08T09:07:17.900Z - ERROR - Error: Déjà abonné
+    at subscribeNewsletter (file:///Users/macbookpro/Desktop/BayySaWaar/baysawarr/controllers/contactController.js:21:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
